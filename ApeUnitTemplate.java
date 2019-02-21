@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class ApeHashTests {
+public class ApeTests {
     private static int failures = 0;
     @Rule
     public TestWatcher watchman = new TestWatcher() {
@@ -23,7 +23,8 @@ public class ApeHashTests {
         }
     };
 
-
+    //tests go here
+    // @Test
 
 
 
