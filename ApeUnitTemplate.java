@@ -37,7 +37,7 @@ public class ApeTests {
     @AfterClass
     public static void testCompleted() throws Exception {
 
-        if (failures <= 0 && succeeded >= 69 /*test count*/) {
+        if (failures <= 0 && succeded >= 69 /*test count*/) {
             try {
                 Desktop.getDesktop().browse(
                         new URL("https://ape-unit.github.io/"
