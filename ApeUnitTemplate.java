@@ -14,25 +14,30 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class ApeTests {
-    private static int failures = 0;
+    private static int  failures= 0;
+    private static int succeded = 0;
+    public static final int TIMEOUT = 200;
     @Rule
     public TestWatcher watchman = new TestWatcher() {
         @Override
         protected void failed(Throwable e, Description description) {
             failures++;
         }
+        @Override
+        protected void succeeded(Description description) {
+            succeded++;
+        }
     };
 
+    //@Test(timeout =TIMEOUT)
     //tests go here
-    // @Test
-
-
-
+    //
+    //@Test(expected = NullPointerException.class)
 
     @AfterClass
     public static void testCompleted() throws Exception {
 
-        if (failures <= 0) {
+        if (failures <= 0 && succeeded >= 69 /*test count*/) {
             try {
                 Desktop.getDesktop().browse(
                         new URL("https://ape-unit.github.io/"
